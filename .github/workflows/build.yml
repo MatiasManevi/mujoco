@@ -410,7 +410,8 @@ jobs:
       run: bash ./.github/workflows/build_steps.sh notify_team_chat
 
 
-  # This job quickly determines if WASM bindings are broken.
+  # This job quickly determines if WASM bindings are broken. It also publishes
+  # the generated WASM npm package when a tag of the form `v*` is pushed.
   wasm:
     name: "ubuntu-24.04-clang-18-wasm"
     runs-on: ubuntu-24.04
