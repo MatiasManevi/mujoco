@@ -1,0 +1,25 @@
+{
+  "name": "mujoco_wasm",
+  "version": "0.0.0",
+  "description": "MuJoCo JavaScript bindings (WASM)",
+  "keywords": [
+    "mujoco",
+    "physics",
+    "wasm",
+    "webassembly",
+    "bindings",
+    "simulation",
+    "robotics",
+    "emscripten",
+    "javascript",
+    "typescript"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/mujoco_wasm.js",
+  "types": "dist/mujoco_wasm.d.ts",
+  "author": "Google DeepMind",
+  "license": "Apache-2.0",
+    "type": "module"
+}
