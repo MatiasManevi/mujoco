@@ -410,7 +410,8 @@ jobs:
       run: bash ./.github/workflows/build_steps.sh notify_team_chat
 
 
-  # This job quickly determines if WASM bindings are broken.
+  # This job quickly determines if WASM bindings are broken. It also publishes
+  # the generated WASM npm package when a tag of the form `v*` is pushed.
   wasm:
     name: "ubuntu-24.04-clang-18-wasm"
     runs-on: ubuntu-24.04
@@ -421,6 +422,7 @@ jobs:
         -DCMAKE_C_COMPILER:STRING=clang-18
         -DCMAKE_CXX_COMPILER:STRING=clang++-18
         -DMUJOCO_HARDEN:BOOL=ON
+      NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
     steps:
     - uses: actions/checkout@v3
 
@@ -441,6 +443,26 @@ jobs:
         bash ./.github/workflows/build_steps.sh npm_ci
         bash ./.github/workflows/build_steps.sh setup_emsdk
         bash ./.github/workflows/build_steps.sh build_test_wasm
+
+    # Publish steps: only run when a tag like `v1.2.3` is pushed. These steps
+    # sync `wasm/package.json` to the tag version and publish `wasm/dist`.
+    - name: Sync version with tag
+      if: startsWith(github.ref, 'refs/tags')
+      run: |
+        VERSION=${GITHUB_REF#refs/tags}
+        pushd wasm
+        npm version $VERSION --no-git-tag-version
+        popd
+
+    - name: Configure npm auth
+      if: startsWith(github.ref, 'refs/tags')
+      run: |
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+    - name: Publish package
+      if: startsWith(github.ref, 'refs/tags')
+      run: |
+        npm publish wasm/dist --access public
 
     - name: Notify team chat
       shell: bash
