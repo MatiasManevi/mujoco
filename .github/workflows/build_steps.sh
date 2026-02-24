@@ -230,6 +230,35 @@ build_test_wasm() {
     npm run test --prefix ./wasm
 }
 
+package_wasm() {
+    echo "Packaging WASM bindings..."
+    if [ -f wasm/package.npm.json ]; then
+        mkdir -p wasm/dist
+        cp wasm/package.npm.json wasm/dist/package.json
+        echo "Copied wasm/package.npm.json -> wasm/dist/package.json"
+    else
+        echo "No wasm/package.npm.json found; aborting"
+        exit 1
+    fi
+
+    mkdir -p wasm/dist
+    cp wasm/README.md wasm/dist/README.md || true
+
+    VERSION=${GITHUB_REF#refs/tags/}
+    echo "Setting package version to: ${VERSION}"
+    npm --prefix wasm/dist version "${VERSION}" --no-git-tag-version
+
+    if [ -z "${NPM_TOKEN}" ]; then
+        echo "NPM_TOKEN not set; aborting publish"
+        exit 1
+    fi
+    echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+    npm pack --dry-run ./wasm/dist
+
+    npm publish ./wasm/dist --access public
+}
+
 
 package_mjx() {
     echo "Packaging MJX..."
