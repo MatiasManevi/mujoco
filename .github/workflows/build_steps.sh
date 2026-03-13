@@ -233,8 +233,13 @@ build_test_wasm() {
 package_wasm() {
     echo "Publishing WASM bindings..."
     cp wasm/package.npm.json wasm/dist/package.json
-    cp wasm/README.md wasm/dist/README.md || true
+    cp wasm/README.md wasm/dist/README.md
 
+    mkdir -p wasm/dist/st
+    mkdir -p wasm/dist/mt
+    mv wasm/dist/mujoco_wasm.* wasm/dist/st/
+    cp wasm/dist/st/* wasm/dist/mt/
+    
     VERSION=${GITHUB_REF#refs/tags/}
     echo "Setting package version to: ${VERSION}"
     npm --prefix wasm/dist version "${VERSION}" --no-git-tag-version
