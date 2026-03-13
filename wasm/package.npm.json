@@ -24,15 +24,6 @@
     "javascript",
     "typescript"
   ],
-  "main": "mujoco.js",
-  "types": "mujoco.d.ts",
-  "files": [
-    "mujoco.js",
-    "mujoco.d.ts",
-    "mujoco.wasm",
-    "mujoco.wasm.map",
-    "README.md"
-  ],
   "author": "Google DeepMind",
   "license": "Apache-2.0",
   "type": "module"

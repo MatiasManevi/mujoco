@@ -239,7 +239,8 @@ package_wasm() {
     mkdir -p wasm/dist/mt
     mv wasm/dist/mujoco.* wasm/dist/st/
     cp wasm/dist/st/* wasm/dist/mt/
-
+    ls -R wasm/dist
+    
     VERSION=${GITHUB_REF#refs/tags/}
     echo "Setting package version to: ${VERSION}"
     npm --prefix wasm/dist version "${VERSION}" --no-git-tag-version
