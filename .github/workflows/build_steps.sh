@@ -239,8 +239,6 @@ build_test_wasm() {
     cmake --build build_wasm_mt
 
     mkdir -p wasm/dist/mt
-    ls mujoco/build_wasm_mt
-    ls mujoco/build_wasm_st
     ls wasm/dist/
     ls wasm/dist/mt
     # Run tests (usually on the ST version for simplicity in CI)
