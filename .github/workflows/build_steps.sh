@@ -239,9 +239,7 @@ build_test_wasm() {
     cmake --build build_wasm_mt
 
     mkdir -p wasm/dist/mt
-    ls mujoco/mujoco/build_wasm_mt
     ls mujoco/build_wasm_mt
-    ls mujoco/mujoco/build_wasm_st
     ls mujoco/build_wasm_st
     ls wasm/dist/
     ls wasm/dist/mt
