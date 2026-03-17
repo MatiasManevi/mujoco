@@ -224,9 +224,31 @@ build_test_wasm() {
     source emsdk/emsdk_env.sh
     export PATH="$(pwd)/node_modules/.bin:$PATH"
 
-    emcmake cmake -B build_wasm -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF $WASM_CMAKE_ARGS
-    cmake --build build_wasm
+    echo "Building Single-Threaded version..."
+    emcmake cmake -B build_wasm_st \
+        -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
+        -DMUJOCO_WASM_THREADS=OFF \
+        $WASM_CMAKE_ARGS
+    cmake --build build_wasm_st
 
+    echo "Building Multi-Threaded version..."
+    emcmake cmake -B build_wasm_mt \
+        -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
+        -DMUJOCO_WASM_THREADS=ON \
+        $WASM_CMAKE_ARGS
+    cmake --build build_wasm_mt
+
+    mkdir -p wasm/dist/mt
+
+    ls -alh build_wasm_mt/
+    ls -alh build_wasm_st/
+    # (The build_wasm_mt/mujoco.* files should be moved to dist/mt)
+    cp build_wasm_mt/mujoco.js wasm/dist/mt/
+    cp build_wasm_mt/mujoco.wasm wasm/dist/mt/
+    cp build_wasm_mt/mujoco.worker.js wasm/dist/mt/
+    cp build_wasm_mt/mujoco.d.ts wasm/dist/mt/
+    ls -alh -r wasm/dist/
+    # Run tests (usually on the ST version for simplicity in CI)
     npm run test --prefix ./wasm
 }
 

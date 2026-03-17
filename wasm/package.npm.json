@@ -24,13 +24,26 @@
     "javascript",
     "typescript"
   ],
+  "exports": {
+    ".": {
+      "types": "./mujoco.d.ts",
+      "import": "./mujoco.js"
+    },
+    "./mt": {
+      "types": "./mt/mujoco.d.ts",
+      "import": "./mt/mujoco.js"
+    }
+  },
   "main": "mujoco.js",
   "types": "mujoco.d.ts",
   "files": [
     "mujoco.js",
-    "mujoco.d.ts",
     "mujoco.wasm",
-    "mujoco.wasm.map",
+    "mujoco.d.ts",
+    "mt/mujoco.js",
+    "mt/mujoco.wasm",
+    "mt/mujoco.worker.js",
+    "mt/mujoco.d.ts",
     "README.md"
   ],
   "author": "Google DeepMind",
