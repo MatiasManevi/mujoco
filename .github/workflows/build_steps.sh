@@ -240,8 +240,10 @@ build_test_wasm() {
 
     mkdir -p wasm/dist/mt
 
-    ls -alh build_wasm_mt/
-    ls -alh build_wasm_st/
+    ls -alh -r build_wasm_mt/src
+    ls -alh -r build_wasm_mt/wasm
+    ls -alh -r build_wasm_st/src
+    ls -alh -r build_wasm_st/wasm
     # (The build_wasm_mt/mujoco.* files should be moved to dist/mt)
     cp build_wasm_mt/mujoco.js wasm/dist/mt/
     cp build_wasm_mt/mujoco.wasm wasm/dist/mt/
