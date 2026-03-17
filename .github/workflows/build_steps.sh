@@ -239,20 +239,12 @@ build_test_wasm() {
     cmake --build build_wasm_mt
 
     mkdir -p wasm/dist/mt
-
-    ls build_wasm_mt/src
-    ls build_wasm_mt/wasm
-    ls build_wasm_st/src
-    ls build_wasm_st/wasm
-
+    ls mujoco/mujoco/build_wasm_mt
+    ls mujoco/build_wasm_mt
+    ls mujoco/mujoco/build_wasm_st
+    ls mujoco/build_wasm_st
     ls wasm/dist/
-
-    # (The build_wasm_mt/mujoco.* files should be moved to dist/mt)
-    cp build_wasm_mt/mujoco.js wasm/dist/mt/
-    cp build_wasm_mt/mujoco.wasm wasm/dist/mt/
-    cp build_wasm_mt/mujoco.worker.js wasm/dist/mt/
-    cp build_wasm_mt/mujoco.d.ts wasm/dist/mt/
-    ls wasm/dist/
+    ls wasm/dist/mt
     # Run tests (usually on the ST version for simplicity in CI)
     npm run test --prefix ./wasm
 }
