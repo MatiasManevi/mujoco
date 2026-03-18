@@ -252,7 +252,6 @@ build_test_wasm() {
 
     ls wasm/dist/
     ls wasm/dist/mt
-    # Run tests (usually on the ST version for simplicity in CI)
     npm run test --prefix ./wasm
 }
 
