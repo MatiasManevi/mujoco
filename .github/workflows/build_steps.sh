@@ -235,10 +235,12 @@ build_test_wasm() {
     # Move MT assets to their subfolder
     # (Since CMake linked them into wasm/dist/ by default)
     mkdir -p wasm/dist/mt
+    echo "Verifying build output first time..."
+
+    ls -R wasm/dist
     mv wasm/dist/mujoco.js wasm/dist/mt/
     mv wasm/dist/mujoco.wasm wasm/dist/mt/
     mv wasm/dist/mujoco.d.ts wasm/dist/mt/
-    mv wasm/dist/mujoco.worker.js wasm/dist/mt/
     [ -f wasm/dist/mujoco.wasm.map ] && mv wasm/dist/mujoco.wasm.map wasm/dist/mt/
 
     # 2. Build Single-Threaded version
