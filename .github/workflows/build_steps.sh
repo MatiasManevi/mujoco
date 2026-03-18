@@ -220,41 +220,39 @@ test_python_bindings() {
 
 
 build_test_wasm() {
+    echo "Building and testing WASM bindings..."
     source emsdk/emsdk_env.sh
+    export PATH="$(pwd)/node_modules/.bin:$PATH"
 
-    # Define our final package locations
-    PKG_ROOT="$(pwd)/wasm"
-    ST_DIST="$PKG_ROOT"
-    MT_DIST="$PKG_ROOT/mt"
-
-    mkdir -p "$MT_DIST"
-
-    echo "Building Single-Threaded version..."
-    # Override CMAKE_RUNTIME_OUTPUT_DIRECTORY to point to the root 'wasm' folder
-    emcmake cmake -B build_wasm_st \
-        -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
-        -DMUJOCO_WASM_THREADS=OFF \
-        -DCMAKE_RUNTIME_OUTPUT_DIRECTORY="$ST_DIST" \
-        $WASM_CMAKE_ARGS
-    cmake --build build_wasm_st --parallel $(nproc)
-
+    # 1. Build Multi-Threaded version first
     echo "Building Multi-Threaded version..."
-    # Override CMAKE_RUNTIME_OUTPUT_DIRECTORY to point to 'wasm/mt'
     emcmake cmake -B build_wasm_mt \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
         -DMUJOCO_WASM_THREADS=ON \
-        -DCMAKE_RUNTIME_OUTPUT_DIRECTORY="$MT_DIST" \
         $WASM_CMAKE_ARGS
     cmake --build build_wasm_mt --parallel $(nproc)
 
-    # Note: Emscripten generates mujoco.worker.js in the SAME folder as mujoco.js
-    # when threads are ON. By redirecting the MT output directory,
-    # it will land correctly in wasm/mt/mujoco.worker.js automatically.
+    # Move MT assets to their subfolder
+    # (Since CMake linked them into wasm/dist/ by default)
+    mkdir -p wasm/dist/mt
+    mv wasm/dist/mujoco.js wasm/dist/mt/
+    mv wasm/dist/mujoco.wasm wasm/dist/mt/
+    mv wasm/dist/mujoco.d.ts wasm/dist/mt/
+    mv wasm/dist/mujoco.worker.js wasm/dist/mt/
+    [ -f wasm/dist/mujoco.wasm.map ] && mv wasm/dist/mujoco.wasm.map wasm/dist/mt/
 
-    echo "Verifying assets..."
-    ls -lh "$ST_DIST/mujoco.js"
-    ls -lh "$MT_DIST/mujoco.js"
-    ls -lh "$MT_DIST/mujoco.worker.js"
+    # 2. Build Single-Threaded version
+    echo "Building Single-Threaded version..."
+    emcmake cmake -B build_wasm_st \
+        -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
+        -DMUJOCO_WASM_THREADS=OFF \
+        $WASM_CMAKE_ARGS
+    cmake --build build_wasm_st --parallel $(nproc)
+
+    # Result: wasm/dist/ now contains ST files, and wasm/dist/mt/ contains MT files.
+
+    echo "Verifying build output..."
+    ls -R wasm/dist
 
     # Run tests
     npm run test --prefix ./wasm
