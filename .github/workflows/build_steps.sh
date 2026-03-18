@@ -238,7 +238,18 @@ build_test_wasm() {
         $WASM_CMAKE_ARGS
     cmake --build build_wasm_mt
 
-    mkdir -p wasm/dist/mt
+    DIST_DIR="wasm"
+    mkdir -p $DIST_DIR/mt
+
+    cp build_wasm_st/bin/mujoco.js $DIST_DIR/
+    cp build_wasm_st/bin/mujoco.wasm $DIST_DIR/
+    cp build_wasm_st/bin/mujoco.d.ts $DIST_DIR/
+
+    cp build_wasm_mt/bin/mujoco.js $DIST_DIR/mt/
+    cp build_wasm_mt/bin/mujoco.wasm $DIST_DIR/mt/
+    cp build_wasm_mt/bin/mujoco.worker.js $DIST_DIR/mt/
+    cp build_wasm_mt/bin/mujoco.d.ts $DIST_DIR/mt/
+
     ls wasm/dist/
     ls wasm/dist/mt
     # Run tests (usually on the ST version for simplicity in CI)
