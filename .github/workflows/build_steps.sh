@@ -220,42 +220,43 @@ test_python_bindings() {
 
 
 build_test_wasm() {
-    echo "Building and testing WASM bindings..."
     source emsdk/emsdk_env.sh
-    export PATH="$(pwd)/node_modules/.bin:$PATH"
+
+    # Define our final package locations
+    PKG_ROOT="$(pwd)/wasm"
+    ST_DIST="$PKG_ROOT"
+    MT_DIST="$PKG_ROOT/mt"
+
+    mkdir -p "$MT_DIST"
 
     echo "Building Single-Threaded version..."
+    # Override CMAKE_RUNTIME_OUTPUT_DIRECTORY to point to the root 'wasm' folder
     emcmake cmake -B build_wasm_st \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
         -DMUJOCO_WASM_THREADS=OFF \
+        -DCMAKE_RUNTIME_OUTPUT_DIRECTORY="$ST_DIST" \
         $WASM_CMAKE_ARGS
-    cmake --build build_wasm_st
+    cmake --build build_wasm_st --parallel $(nproc)
 
     echo "Building Multi-Threaded version..."
+    # Override CMAKE_RUNTIME_OUTPUT_DIRECTORY to point to 'wasm/mt'
     emcmake cmake -B build_wasm_mt \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION:BOOL=OFF \
         -DMUJOCO_WASM_THREADS=ON \
+        -DCMAKE_RUNTIME_OUTPUT_DIRECTORY="$MT_DIST" \
         $WASM_CMAKE_ARGS
-    cmake --build build_wasm_mt
+    cmake --build build_wasm_mt --parallel $(nproc)
 
-    DIST_DIR="wasm"
-    mkdir -p $DIST_DIR/mt
+    # Note: Emscripten generates mujoco.worker.js in the SAME folder as mujoco.js
+    # when threads are ON. By redirecting the MT output directory,
+    # it will land correctly in wasm/mt/mujoco.worker.js automatically.
 
-    pwd
-    ls build_wasm_st/src
-    ls build_wasm_mt/src
-    find build_wasm_st -name "mujoco.js"
-    cp build_wasm_st/bin/mujoco.js $DIST_DIR/
-    cp build_wasm_st/bin/mujoco.wasm $DIST_DIR/
-    cp build_wasm_st/bin/mujoco.d.ts $DIST_DIR/
+    echo "Verifying assets..."
+    ls -lh "$ST_DIST/mujoco.js"
+    ls -lh "$MT_DIST/mujoco.js"
+    ls -lh "$MT_DIST/mujoco.worker.js"
 
-    cp build_wasm_mt/bin/mujoco.js $DIST_DIR/mt/
-    cp build_wasm_mt/bin/mujoco.wasm $DIST_DIR/mt/
-    cp build_wasm_mt/bin/mujoco.worker.js $DIST_DIR/mt/
-    cp build_wasm_mt/bin/mujoco.d.ts $DIST_DIR/mt/
-
-    ls wasm/dist/
-    ls wasm/dist/mt
+    # Run tests
     npm run test --prefix ./wasm
 }
 
