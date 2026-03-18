@@ -241,6 +241,8 @@ build_test_wasm() {
     DIST_DIR="wasm"
     mkdir -p $DIST_DIR/mt
 
+    pwd
+    find build_wasm_st -name "mujoco.js"
     cp build_wasm_st/bin/mujoco.js $DIST_DIR/
     cp build_wasm_st/bin/mujoco.wasm $DIST_DIR/
     cp build_wasm_st/bin/mujoco.d.ts $DIST_DIR/
