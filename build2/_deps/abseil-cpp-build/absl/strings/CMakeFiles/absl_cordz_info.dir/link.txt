@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libabsl_cordz_info.a CMakeFiles/absl_cordz_info.dir/internal/cordz_info.cc.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libabsl_cordz_info.a

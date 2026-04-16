@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libspirv-cross-core.a "CMakeFiles/spirv-cross-core.dir/__/spirv_cross.cpp.o" "CMakeFiles/spirv-cross-core.dir/__/spirv_parser.cpp.o" "CMakeFiles/spirv-cross-core.dir/__/spirv_cross_parsed_ir.cpp.o" "CMakeFiles/spirv-cross-core.dir/__/spirv_cfg.cpp.o"
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libspirv-cross-core.a

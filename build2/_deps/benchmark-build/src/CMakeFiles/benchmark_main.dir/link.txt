@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../lib/libbenchmark_main.a CMakeFiles/benchmark_main.dir/benchmark_main.cc.o
-"/usr/bin/gcc-ranlib-14" ../../../lib/libbenchmark_main.a

@@ -1,5 +1,0 @@
-if(EXISTS "/home/matias/personal/mujoco/build2/test/plugin/elasticity/elasticity_test[1]_tests.cmake")
-  include("/home/matias/personal/mujoco/build2/test/plugin/elasticity/elasticity_test[1]_tests.cmake")
-else()
-  add_test(elasticity_test_NOT_BUILT elasticity_test_NOT_BUILT)
-endif()

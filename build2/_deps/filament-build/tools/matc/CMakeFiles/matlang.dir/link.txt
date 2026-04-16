@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libmatlang.a CMakeFiles/matlang.dir/src/matc/Compiler.cpp.o CMakeFiles/matlang.dir/src/matc/CommandlineConfig.cpp.o CMakeFiles/matlang.dir/src/matc/DirIncluder.cpp.o CMakeFiles/matlang.dir/src/matc/Includes.cpp.o CMakeFiles/matlang.dir/src/matc/MaterialCompiler.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libmatlang.a

@@ -1,5 +1,0 @@
-if(EXISTS "/home/matias/personal/mujoco/build2/test/header_test[1]_tests.cmake")
-  include("/home/matias/personal/mujoco/build2/test/header_test[1]_tests.cmake")
-else()
-  add_test(header_test_NOT_BUILT header_test_NOT_BUILT)
-endif()

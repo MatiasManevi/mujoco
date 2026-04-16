@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -fuse-ld=gold -Wl,--gc-sections -Wl,--dependency-file=CMakeFiles/record.dir/link.d CMakeFiles/record.dir/record.cc.o -o ../bin/record  -Wl,-rpath,"\$ORIGIN/../lib" ../lib/libmujoco.so.3.7.1 ../lib/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a -lm -ldl

@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libzstd-basisu.a "CMakeFiles/zstd-basisu.dir/__/zstd/zstd.c.o"
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libzstd-basisu.a

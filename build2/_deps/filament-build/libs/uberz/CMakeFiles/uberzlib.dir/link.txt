@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libuberzlib.a CMakeFiles/uberzlib.dir/src/ReadableArchive.cpp.o CMakeFiles/uberzlib.dir/src/WritableArchive.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libuberzlib.a

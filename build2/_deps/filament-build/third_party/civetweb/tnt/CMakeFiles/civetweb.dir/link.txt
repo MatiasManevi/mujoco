@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libcivetweb.a CMakeFiles/civetweb.dir/__/src/civetweb.c.o CMakeFiles/civetweb.dir/__/src/CivetServer.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libcivetweb.a

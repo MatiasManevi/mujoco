@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libperfetto.a CMakeFiles/perfetto.dir/__/perfetto/perfetto.cc.o
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libperfetto.a

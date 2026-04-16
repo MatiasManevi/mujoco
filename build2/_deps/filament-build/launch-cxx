@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [[ "$1" = "/usr/bin/c++" ]]; then
-    shift
-fi
-
-export CCACHE_CPP2=true
-export CCACHE_SLOPPINESS=file_macro,time_macros,locale,file_stat_matches
-exec "/usr/bin/ccache" "/usr/bin/c++" "$@"

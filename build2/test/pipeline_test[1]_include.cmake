@@ -1,5 +1,0 @@
-if(EXISTS "/home/matias/personal/mujoco/build2/test/pipeline_test[1]_tests.cmake")
-  include("/home/matias/personal/mujoco/build2/test/pipeline_test[1]_tests.cmake")
-else()
-  add_test(pipeline_test_NOT_BUILT pipeline_test_NOT_BUILT)
-endif()

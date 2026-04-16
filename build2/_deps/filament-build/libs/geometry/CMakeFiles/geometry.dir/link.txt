@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libgeometry.a CMakeFiles/geometry.dir/src/MikktspaceImpl.cpp.o CMakeFiles/geometry.dir/src/SurfaceOrientation.cpp.o CMakeFiles/geometry.dir/src/TangentSpaceMesh.cpp.o CMakeFiles/geometry.dir/src/Transcoder.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libgeometry.a

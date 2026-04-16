@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libmatdbg_resources.a CMakeFiles/matdbg_resources.dir/dummy.c.o CMakeFiles/matdbg_resources.dir/matdbg_resources.S.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libmatdbg_resources.a

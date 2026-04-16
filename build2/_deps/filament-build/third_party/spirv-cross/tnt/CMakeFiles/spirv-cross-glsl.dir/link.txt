@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libspirv-cross-glsl.a "CMakeFiles/spirv-cross-glsl.dir/__/spirv_glsl.cpp.o"
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libspirv-cross-glsl.a

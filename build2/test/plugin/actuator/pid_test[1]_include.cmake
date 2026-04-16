@@ -1,5 +1,0 @@
-if(EXISTS "/home/matias/personal/mujoco/build2/test/plugin/actuator/pid_test[1]_tests.cmake")
-  include("/home/matias/personal/mujoco/build2/test/plugin/actuator/pid_test[1]_tests.cmake")
-else()
-  add_test(pid_test_NOT_BUILT pid_test_NOT_BUILT)
-endif()

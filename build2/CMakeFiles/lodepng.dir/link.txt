@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc lib/liblodepng.a "CMakeFiles/lodepng.dir/_deps/lodepng-src/lodepng.cpp.o"
-"/usr/bin/gcc-ranlib-14" lib/liblodepng.a

@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libfilagui.a CMakeFiles/filagui.dir/src/ImGuiHelper.cpp.o CMakeFiles/filagui.dir/src/ImGuiExtensions.cpp.o CMakeFiles/filagui.dir/generated/resources/filagui_resources.S.o CMakeFiles/filagui.dir/generated/resources/dummy.c.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libfilagui.a

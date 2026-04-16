@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libsmol-v.a "CMakeFiles/smol-v.dir/__/source/smolv.cpp.o"
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libsmol-v.a

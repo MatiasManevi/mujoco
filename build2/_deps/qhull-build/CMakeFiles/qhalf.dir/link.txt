@@ -1,1 +1,0 @@
-/usr/bin/cc -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -Wl,--dependency-file=CMakeFiles/qhalf.dir/link.d CMakeFiles/qhalf.dir/src/qhalf/qhalf.c.o -o ../../bin/qhalf  -Wl,-rpath,::: ../../lib/libqhullstatic.a -lm

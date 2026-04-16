@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libabsl_flags_config.a CMakeFiles/absl_flags_config.dir/usage_config.cc.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libabsl_flags_config.a

@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libabsl_stacktrace.a CMakeFiles/absl_stacktrace.dir/stacktrace.cc.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libabsl_stacktrace.a

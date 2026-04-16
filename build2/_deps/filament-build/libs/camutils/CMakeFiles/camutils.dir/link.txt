@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libcamutils.a CMakeFiles/camutils.dir/src/Bookmark.cpp.o CMakeFiles/camutils.dir/src/Manipulator.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libcamutils.a

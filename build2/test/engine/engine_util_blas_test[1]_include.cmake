@@ -1,5 +1,0 @@
-if(EXISTS "/home/matias/personal/mujoco/build2/test/engine/engine_util_blas_test[1]_tests.cmake")
-  include("/home/matias/personal/mujoco/build2/test/engine/engine_util_blas_test[1]_tests.cmake")
-else()
-  add_test(engine_util_blas_test_NOT_BUILT engine_util_blas_test_NOT_BUILT)
-endif()

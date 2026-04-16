@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../lib/libsample-resources.a "CMakeFiles/sample-resources.dir/generated/resources/dummy.c.o" "CMakeFiles/sample-resources.dir/generated/resources/resources.S.o"
-"/usr/bin/gcc-ranlib-14" ../../../lib/libsample-resources.a

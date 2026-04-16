@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libuberarchive.a CMakeFiles/uberarchive.dir/dummy.c.o CMakeFiles/uberarchive.dir/materials/uberarchive.S.o
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libuberarchive.a

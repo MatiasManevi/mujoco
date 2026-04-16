@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../lib/libspirv-cross-msl.a "CMakeFiles/spirv-cross-msl.dir/__/spirv_msl.cpp.o"
-"/usr/bin/gcc-ranlib-14" ../../../../../lib/libspirv-cross-msl.a

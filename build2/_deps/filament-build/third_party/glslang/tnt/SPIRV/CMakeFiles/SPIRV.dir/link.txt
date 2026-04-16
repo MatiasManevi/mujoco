@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../../../lib/libSPIRV.a CMakeFiles/SPIRV.dir/__/GlslangToSpv.cpp.o CMakeFiles/SPIRV.dir/__/InReadableOrder.cpp.o CMakeFiles/SPIRV.dir/__/Logger.cpp.o CMakeFiles/SPIRV.dir/__/SpvBuilder.cpp.o CMakeFiles/SPIRV.dir/__/SpvPostProcess.cpp.o CMakeFiles/SPIRV.dir/__/SPVRemapper.cpp.o CMakeFiles/SPIRV.dir/__/doc.cpp.o CMakeFiles/SPIRV.dir/__/disassemble.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../../../../../lib/libSPIRV.a

@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../lib/libdear_imgui.a CMakeFiles/dear_imgui.dir/imgui.cpp.o CMakeFiles/dear_imgui.dir/imgui_draw.cpp.o CMakeFiles/dear_imgui.dir/imgui_tables.cpp.o CMakeFiles/dear_imgui.dir/imgui_widgets.cpp.o CMakeFiles/dear_imgui.dir/imgui_demo.cpp.o
-"/usr/bin/gcc-ranlib-14" ../../lib/libdear_imgui.a

@@ -1,3 +1,0 @@
-/home/matias/personal/mujoco/build2/_deps/filament-subbuild/CMakeFiles/filament-populate.dir
-/home/matias/personal/mujoco/build2/_deps/filament-subbuild/CMakeFiles/edit_cache.dir
-/home/matias/personal/mujoco/build2/_deps/filament-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,2 +1,0 @@
-"/usr/bin/gcc-ar-14" qc ../../../../lib/libfilament-generatePrefilterMipmap.a "CMakeFiles/filament-generatePrefilterMipmap.dir/src/generatePrefilterMipmap.cpp.o"
-"/usr/bin/gcc-ranlib-14" ../../../../lib/libfilament-generatePrefilterMipmap.a
