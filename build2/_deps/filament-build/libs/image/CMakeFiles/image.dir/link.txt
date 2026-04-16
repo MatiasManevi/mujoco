@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libimage.a CMakeFiles/image.dir/src/ImageOps.cpp.o CMakeFiles/image.dir/src/ImageSampler.cpp.o CMakeFiles/image.dir/src/Ktx1Bundle.cpp.o CMakeFiles/image.dir/src/LinearImage.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libimage.a

@@ -1,0 +1,5 @@
+if(EXISTS "/home/matias/personal/mujoco/build2/test/xml/xml_native_writer_test[1]_tests.cmake")
+  include("/home/matias/personal/mujoco/build2/test/xml/xml_native_writer_test[1]_tests.cmake")
+else()
+  add_test(xml_native_writer_test_NOT_BUILT xml_native_writer_test_NOT_BUILT)
+endif()

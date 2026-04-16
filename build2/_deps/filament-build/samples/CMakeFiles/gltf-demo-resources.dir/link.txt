@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../lib/libgltf-demo-resources.a "CMakeFiles/gltf-demo-resources.dir/generated/resources/dummy.c.o" "CMakeFiles/gltf-demo-resources.dir/generated/resources/gltf_demo.S.o"
+"/usr/bin/gcc-ranlib-14" ../../../lib/libgltf-demo-resources.a

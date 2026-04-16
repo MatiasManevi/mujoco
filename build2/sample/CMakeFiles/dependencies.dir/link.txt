@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -fuse-ld=gold -Wl,--gc-sections -Wl,--dependency-file=CMakeFiles/dependencies.dir/link.d CMakeFiles/dependencies.dir/dependencies.cc.o -o ../bin/dependencies  -Wl,-rpath,"\$ORIGIN/../lib" ../lib/libmujoco.so.3.7.1

@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libabsl_graphcycles_internal.a CMakeFiles/absl_graphcycles_internal.dir/internal/graphcycles.cc.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libabsl_graphcycles_internal.a

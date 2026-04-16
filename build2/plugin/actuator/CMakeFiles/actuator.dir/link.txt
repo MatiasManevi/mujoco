@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -fuse-ld=gold -Wl,--gc-sections -Wl,--dependency-file=CMakeFiles/actuator.dir/link.d -shared -Wl,-soname,libactuator.so -o ../../lib/libactuator.so CMakeFiles/actuator.dir/pid.cc.o CMakeFiles/actuator.dir/register.cc.o  -Wl,-rpath,/home/matias/personal/mujoco/build2/lib ../../lib/libmujoco.so.3.7.1

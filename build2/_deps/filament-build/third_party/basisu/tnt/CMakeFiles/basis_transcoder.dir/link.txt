@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../../lib/libbasis_transcoder.a CMakeFiles/basis_transcoder.dir/__/transcoder/basisu_transcoder.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../../lib/libbasis_transcoder.a

@@ -1,0 +1,5 @@
+if(EXISTS "/home/matias/personal/mujoco/build2/test/fixture_test[1]_tests.cmake")
+  include("/home/matias/personal/mujoco/build2/test/fixture_test[1]_tests.cmake")
+else()
+  add_test(fixture_test_NOT_BUILT fixture_test_NOT_BUILT)
+endif()

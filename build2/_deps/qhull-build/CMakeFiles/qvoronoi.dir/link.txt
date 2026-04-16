@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -Wl,--dependency-file=CMakeFiles/qvoronoi.dir/link.d CMakeFiles/qvoronoi.dir/src/qvoronoi/qvoronoi.c.o -o ../../bin/qvoronoi  -Wl,-rpath,::: ../../lib/libqhullstatic.a -lm

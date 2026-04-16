@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libfilabridge.a CMakeFiles/filabridge.dir/src/BufferInterfaceBlock.cpp.o CMakeFiles/filabridge.dir/src/DescriptorSets.cpp.o CMakeFiles/filabridge.dir/src/SamplerInterfaceBlock.cpp.o CMakeFiles/filabridge.dir/src/Variant.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libfilabridge.a

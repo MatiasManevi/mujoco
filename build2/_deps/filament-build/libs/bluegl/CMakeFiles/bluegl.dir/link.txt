@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libbluegl.a CMakeFiles/bluegl.dir/src/BlueGL.cpp.o CMakeFiles/bluegl.dir/src/BlueGLLinux.cpp.o CMakeFiles/bluegl.dir/src/BlueGLCoreLinuxUniversalImpl.S.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libbluegl.a

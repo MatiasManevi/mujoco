@@ -26,3 +26,15 @@ fetchpackage(
     GIT_REPO      https://github.com/libsdl-org/SDL.git
     GIT_TAG       ${MUJOCO_DEP_VERSION_sdl2}
 )
+
+# Some SDL2 build systems define plain targets like SDL2-static.
+# Create the common namespaced aliases so downstream targets can use
+# SDL2::SDL2-static or SDL2::SDL2 consistently.
+if(NOT TARGET SDL2::SDL2-static AND TARGET SDL2-static)
+  add_library(SDL2::SDL2-static ALIAS SDL2-static)
+endif()
+if(NOT TARGET SDL2::SDL2 AND TARGET SDL2)
+  add_library(SDL2::SDL2 ALIAS SDL2)
+elseif(NOT TARGET SDL2::SDL2 AND TARGET SDL2-static)
+  add_library(SDL2::SDL2 ALIAS SDL2-static)
+endif()

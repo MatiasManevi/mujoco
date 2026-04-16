@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../lib/libfixture.a CMakeFiles/fixture.dir/fixture.cc.o
+"/usr/bin/gcc-ranlib-14" ../lib/libfixture.a

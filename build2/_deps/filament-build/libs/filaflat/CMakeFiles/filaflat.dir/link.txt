@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libfilaflat.a CMakeFiles/filaflat.dir/src/ChunkContainer.cpp.o CMakeFiles/filaflat.dir/src/DictionaryReader.cpp.o CMakeFiles/filaflat.dir/src/MaterialChunk.cpp.o CMakeFiles/filaflat.dir/src/Unflattener.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libfilaflat.a

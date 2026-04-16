@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../../../../../lib/libOSDependent.a CMakeFiles/OSDependent.dir/__/__/stub.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../../../../../lib/libOSDependent.a

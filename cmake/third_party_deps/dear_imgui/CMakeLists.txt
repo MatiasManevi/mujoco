@@ -29,11 +29,19 @@ target_sources(dear_imgui
 )
 
 # SDL2 backend
-# TODO: I don't know how to correctly check for dependencies in cmake. This
-# assumes that SDL2 is pulled in _before_ dear_imgui, but that seems fragile.
-# For now, we'll just assume SDL2 is available as dear_imgui is only being used
-# in contexts which depend on SDL2.
-#if(TARGET SDL2)
+# Prefer to use SDL2 if it is available, but skip the SDL2 backend when it
+# is not present to avoid build failures in contexts without SDL2 support.
+if(TARGET SDL2::SDL2-static OR TARGET SDL2-static OR TARGET SDL2::SDL2 OR TARGET SDL2)
+  if(NOT TARGET SDL2::SDL2-static)
+    if(TARGET SDL2-static)
+      add_library(SDL2::SDL2-static ALIAS SDL2-static)
+    elseif(TARGET SDL2::SDL2)
+      add_library(SDL2::SDL2-static ALIAS SDL2::SDL2)
+    elseif(TARGET SDL2)
+      add_library(SDL2::SDL2-static ALIAS SDL2)
+    endif()
+  endif()
+
   add_library(dear_imgui_SDL2 STATIC)
   target_include_directories(dear_imgui_SDL2
     PUBLIC
@@ -46,7 +54,7 @@ target_sources(dear_imgui
   target_link_libraries(dear_imgui_SDL2
     SDL2::SDL2-static
   )
-#endif()
+endif()
 
 # OpenGL3 backend
 add_library(dear_imgui_OpenGL3 STATIC)

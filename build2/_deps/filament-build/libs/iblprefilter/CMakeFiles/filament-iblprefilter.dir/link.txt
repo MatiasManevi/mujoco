@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libfilament-iblprefilter.a "CMakeFiles/filament-iblprefilter.dir/src/IBLPrefilterContext.cpp.o" "CMakeFiles/filament-iblprefilter.dir/generated/resources/iblprefilter_materials.S.o"
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libfilament-iblprefilter.a

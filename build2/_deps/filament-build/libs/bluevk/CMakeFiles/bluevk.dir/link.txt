@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libbluevk.a CMakeFiles/bluevk.dir/src/BlueVK.cpp.o CMakeFiles/bluevk.dir/src/BlueVKLinuxAndroid.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libbluevk.a

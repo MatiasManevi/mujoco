@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libktxreader.a CMakeFiles/ktxreader.dir/src/Ktx1Reader.cpp.o CMakeFiles/ktxreader.dir/src/Ktx2Reader.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libktxreader.a

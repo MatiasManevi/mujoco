@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../../lib/libfilament-abseil.a "CMakeFiles/filament-abseil.dir/dummy.c.o"
+"/usr/bin/gcc-ranlib-14" ../../../../../lib/libfilament-abseil.a

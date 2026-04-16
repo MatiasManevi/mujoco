@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../lib/libdear_imgui_OpenGL3.a CMakeFiles/dear_imgui_OpenGL3.dir/backends/imgui_impl_opengl3.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../lib/libdear_imgui_OpenGL3.a

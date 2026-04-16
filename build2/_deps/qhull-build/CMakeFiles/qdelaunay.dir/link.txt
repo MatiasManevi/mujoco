@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -Wl,--dependency-file=CMakeFiles/qdelaunay.dir/link.d CMakeFiles/qdelaunay.dir/src/qdelaunay/qdelaun.c.o -o ../../bin/qdelaunay  -Wl,-rpath,::: ../../lib/libqhullstatic.a -lm

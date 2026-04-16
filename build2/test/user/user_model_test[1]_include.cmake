@@ -1,0 +1,5 @@
+if(EXISTS "/home/matias/personal/mujoco/build2/test/user/user_model_test[1]_tests.cmake")
+  include("/home/matias/personal/mujoco/build2/test/user/user_model_test[1]_tests.cmake")
+else()
+  add_test(user_model_test_NOT_BUILT user_model_test_NOT_BUILT)
+endif()

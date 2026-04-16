@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../lib/libsamples-common.a "CMakeFiles/samples-common.dir/common/arguments.cpp.o" "CMakeFiles/samples-common.dir/common/configuration.cpp.o"
+"/usr/bin/gcc-ranlib-14" ../../../lib/libsamples-common.a

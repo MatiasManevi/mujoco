@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libviewer.a CMakeFiles/viewer.dir/src/AutomationEngine.cpp.o CMakeFiles/viewer.dir/src/AutomationSpec.cpp.o CMakeFiles/viewer.dir/src/RemoteServer.cpp.o CMakeFiles/viewer.dir/src/Settings.cpp.o CMakeFiles/viewer.dir/src/Settings_generated.cpp.o CMakeFiles/viewer.dir/src/TIFFExport.cpp.o CMakeFiles/viewer.dir/src/ViewerGui.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libviewer.a

@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../../lib/libshaders.a CMakeFiles/shaders.dir/generated/shaders.S.o
+/usr/bin/ranlib ../../../lib/libshaders.a

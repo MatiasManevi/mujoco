@@ -1,0 +1,5 @@
+if(EXISTS "/home/matias/personal/mujoco/build2/test/engine/engine_core_constraint_test[1]_tests.cmake")
+  include("/home/matias/personal/mujoco/build2/test/engine/engine_core_constraint_test[1]_tests.cmake")
+else()
+  add_test(engine_core_constraint_test_NOT_BUILT engine_core_constraint_test_NOT_BUILT)
+endif()

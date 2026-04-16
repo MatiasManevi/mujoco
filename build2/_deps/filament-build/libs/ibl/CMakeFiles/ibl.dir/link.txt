@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libibl.a CMakeFiles/ibl.dir/src/Cubemap.cpp.o CMakeFiles/ibl.dir/src/CubemapIBL.cpp.o CMakeFiles/ibl.dir/src/CubemapSH.cpp.o CMakeFiles/ibl.dir/src/CubemapUtils.cpp.o CMakeFiles/ibl.dir/src/Image.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libibl.a

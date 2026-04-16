@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libmatdbg.a CMakeFiles/matdbg.dir/src/ApiHandler.cpp.o CMakeFiles/matdbg.dir/src/CommonWriter.cpp.o CMakeFiles/matdbg.dir/src/DebugServer.cpp.o CMakeFiles/matdbg.dir/src/JsonWriter.cpp.o CMakeFiles/matdbg.dir/src/ShaderReplacer.cpp.o CMakeFiles/matdbg.dir/src/ShaderExtractor.cpp.o CMakeFiles/matdbg.dir/src/ShaderInfo.cpp.o CMakeFiles/matdbg.dir/src/SourceFormatter.cpp.o CMakeFiles/matdbg.dir/src/TextWriter.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libmatdbg.a

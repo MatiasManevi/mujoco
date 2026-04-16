@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar-14" qc ../../../../lib/libgltfio.a CMakeFiles/gltfio.dir/src/JitShaderProvider.cpp.o
+"/usr/bin/gcc-ranlib-14" ../../../../lib/libgltfio.a

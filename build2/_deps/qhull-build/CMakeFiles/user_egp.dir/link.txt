@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -flto=auto -fno-fat-lto-objects -Wl,--dependency-file=CMakeFiles/user_egp.dir/link.d CMakeFiles/user_egp.dir/src/user_eg/user_eg.c.o -o ../../bin/user_egp  -Wl,-rpath,/home/matias/personal/mujoco/build2/lib ../../lib/libqhull_p.so.8.1-alpha3 -lm

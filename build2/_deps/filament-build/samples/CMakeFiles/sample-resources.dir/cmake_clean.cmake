@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "../../../lib/libsample-resources.a"
+  "../../../lib/libsample-resources.pdb"
+  "CMakeFiles/sample-resources.dir/generated/resources/dummy.c.o"
+  "CMakeFiles/sample-resources.dir/generated/resources/dummy.c.o.d"
+  "CMakeFiles/sample-resources.dir/generated/resources/resources.S.o"
+  "generated/material/aiDefaultMat.filamat"
+  "generated/material/aoPreview.filamat"
+  "generated/material/arrayTexture.filamat"
+  "generated/material/bakedColor.filamat"
+  "generated/material/bakedTexture.filamat"
+  "generated/material/groundShadow.filamat"
+  "generated/material/heightfield.filamat"
+  "generated/material/image.filamat"
+  "generated/material/mirror.filamat"
+  "generated/material/overdraw.filamat"
+  "generated/material/pointSprites.filamat"
+  "generated/material/sandboxCloth.filamat"
+  "generated/material/sandboxLit.filamat"
+  "generated/material/sandboxLitFade.filamat"
+  "generated/material/sandboxLitSolidRefraction.filamat"
+  "generated/material/sandboxLitSolidRefractionSsr.filamat"
+  "generated/material/sandboxLitThinRefraction.filamat"
+  "generated/material/sandboxLitThinRefractionSsr.filamat"
+  "generated/material/sandboxLitTransparent.filamat"
+  "generated/material/sandboxSpecGloss.filamat"
+  "generated/material/sandboxSubsurface.filamat"
+  "generated/material/sandboxTransformName.filamat"
+  "generated/material/sandboxUnlit.filamat"
+  "generated/material/texturedLit.filamat"
+  "generated/resources/dummy.c"
+  "generated/resources/resources.S"
+  "generated/resources/resources.apple.S"
+  "generated/resources/resources.bin"
+  "generated/resources/resources.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang ASM C)
+  include(CMakeFiles/sample-resources.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

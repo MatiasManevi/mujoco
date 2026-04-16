@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/CMakeFiles/ccd-populate"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/CMakeFiles/ccd-populate.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/CMakeFiles/ccd-populate-complete.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-build.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-configure.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-download.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-install.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-patch_disconnected.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-test.rule"
+		},
+		{
+			"file" : "/home/matias/personal/mujoco/build2/_deps/ccd-subbuild/ccd-populate-prefix/src/ccd-populate-stamp/ccd-populate-update_disconnected.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ccd-populate"
+		],
+		"name" : "ccd-populate"
+	}
+}
